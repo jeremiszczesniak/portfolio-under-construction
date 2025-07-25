@@ -1,15 +1,3 @@
-let lastScrollY = window.scrollY;
-window.addEventListener("scroll", () => {
-    if (window.scrollY > lastScrollY) {
-        document.querySelector(".navbar").style.top = "-60px";
-        document.querySelector(".navbar").style.backgroundColor = "transparent";
-    } else {
-        document.querySelector(".navbar").style.top = "0";
-        document.querySelector(".navbar").style.backgroundColor = "#fefae0";
-    }
-    lastScrollY = window.scrollY;
-});
-
 function klik() {
     var s = document.getElementById("listabtn").getAttribute("switch");
     if(s == "0"){
@@ -75,4 +63,9 @@ document.querySelector("form").addEventListener("submit", function(e) {
     alert("Podaj poprawny adres e-mail z końcówką .pl, .com, .org lub .net.");
     emailInput.focus();
   }
+});
+document.querySelector('.nav1-burger').addEventListener('click', () => {
+  document.querySelectorAll(".nav1").forEach(link => {
+    link.classList.toggle('active');
+  })
 });

@@ -2,7 +2,7 @@
 let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {
     if (window.scrollY > lastScrollY) {
-        document.querySelector(".navbar").style.top = "-60px";
+        document.querySelector(".navbar").style.top = "-80px";
         document.querySelector(".navbar").style.backgroundColor = "transparent";
     } else {
         document.querySelector(".navbar").style.top = "0";
@@ -202,3 +202,8 @@ document.getElementById('increase-font').addEventListener('click', () => adjustF
 document.getElementById('decrease-font').addEventListener('click', () => adjustFontSize(-1));
 document.getElementById('increase-spacing').addEventListener('click', () => adjustLetterSpacing(0.5));
 document.getElementById('decrease-spacing').addEventListener('click', () => adjustLetterSpacing(-0.5));
+document.querySelector('.nav1-burger').addEventListener('click', () => {
+  document.querySelectorAll(".nav1").forEach(link => {
+    link.classList.toggle('active');
+  })
+});
